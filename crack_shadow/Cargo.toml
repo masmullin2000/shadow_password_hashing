@@ -1,0 +1,27 @@
+[package]
+name = "crack_shadow"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "*"
+clap = { version = "*", features = ["derive"] }
+sha2 = "*"
+#sha-crypt = "*"
+sha-crypt = { version = "*", git = "https://github.com/masmullin2000/password-hashes.git", branch = "length_too_long" }
+rayon = "*"
+
+[dev-dependencies]
+criterion = "*"
+
+[lib]
+name = "lib"
+path = "src/lib.rs"
+
+[[bin]]
+name = "crack_shadow"
+path = "src/main.rs"
+
+[[bench]]
+name = "bench"
+harness = false

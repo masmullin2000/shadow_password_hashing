@@ -1,0 +1,11 @@
+[workspace]
+members = [
+    "crack_shadow",
+    "better_shadow",
+]
+
+[profile.release]
+lto = true
+opt-level = 2
+strip = true 
+codegen-units = 1

@@ -1,0 +1,26 @@
+[package]
+name = "better_shadow"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+argon2 = "*"
+base64 = "*"
+clap = { version = "*", features = ["derive"] }
+hex = "*"
+hmac = "*"
+pbkdf2 = "*"
+rand = "*"
+rand_chacha = "*"
+sha2 = "*"
+subtle = "*"
+
+[lib]
+name = "lib"
+path = "src/lib.rs"
+
+[[bin]]
+name = "better_shadow"
+path = "src/main.rs"
+
+
